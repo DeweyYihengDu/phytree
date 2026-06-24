@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phytree"
+dynamic = ["version"]
+description = "Phylogenetic trees and publication figures in Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Yiheng Du", email = "yiheng.du@slu.edu" }]
+keywords = ["phylogenetics", "phylogenetic-tree", "tree", "visualization", "bioinformatics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "pandas>=1.4",
+    "matplotlib>=3.5",
+    "biopython>=1.79",
+]
+
+[project.optional-dependencies]
+interactive = ["plotly>=5.0"]
+dev = ["pytest>=7", "plotly>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/DeweyYihengDu/phytree"
+Repository = "https://github.com/DeweyYihengDu/phytree"
+Documentation = "https://github.com/DeweyYihengDu/phytree#readme"
+Issues = "https://github.com/DeweyYihengDu/phytree/issues"
+Changelog = "https://github.com/DeweyYihengDu/phytree/blob/main/CHANGELOG.md"
+
+[tool.setuptools.dynamic]
+version = { attr = "phytree.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["phytree*"]

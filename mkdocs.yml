@@ -1,0 +1,30 @@
+site_name: phytree
+site_description: phylogenetic trees and publication figures in Python
+theme:
+  name: material
+  features: [navigation.sections, content.code.copy]
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_root_heading: true
+            show_source: false
+
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Sequences to a tree: tutorials/build_tree.md
+      - Annotated trees: tutorials/annotate.md
+      - Comparative methods: tutorials/comparative.md
+  - API reference: api.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+# Build with:  pip install mkdocs-material mkdocstrings[python]; mkdocs serve

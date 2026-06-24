@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 180" width="560" height="180" role="img" aria-labelledby="t d">
+  <title id="t">phytree</title>
+  <desc id="d">A phylogenetic tree mark beside the phytree wordmark.</desc>
+  <!-- tree mark: a left-to-right cladogram -->
+  <g fill="none" stroke="#7f8a90" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <!-- root stem -->
+    <path d="M24 90 H70"/>
+    <!-- first split -->
+    <path d="M70 90 V52 H112"/>
+    <path d="M70 90 V128 H112"/>
+    <!-- upper clade split -->
+    <path d="M112 52 V34 H158"/>
+    <path d="M112 52 V70 H158"/>
+    <!-- lower clade split -->
+    <path d="M112 128 V110 H158"/>
+    <path d="M112 128 V146 H158"/>
+  </g>
+  <!-- tip nodes (HCL hue palette) -->
+  <g>
+    <circle cx="158" cy="34"  r="9" fill="#F8766D"/>
+    <circle cx="158" cy="70"  r="9" fill="#C49A00"/>
+    <circle cx="158" cy="110" r="9" fill="#00BA38"/>
+    <circle cx="158" cy="146" r="9" fill="#619CFF"/>
+  </g>
+  <!-- wordmark -->
+  <text x="206" y="100" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="74" font-weight="600" fill="#1f9e94" letter-spacing="-1">phytree</text>
+  <text x="210" y="134" font-family="'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="20" font-weight="400" fill="#8a929b">phylogenetic trees in Python</text>
+</svg>

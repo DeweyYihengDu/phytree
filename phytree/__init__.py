@@ -1,0 +1,49 @@
+"""phytree -- phylogenetic trees and publication figures in Python.
+
+Quick start
+-----------
+>>> import phytree as pt
+>>> tr = pt.datasets.primates()
+>>> (pt.TreeFigure(tr)
+...     .tip_labels()
+...     .support_labels()).save("tree.pdf")
+
+The package is layered:
+
+* ``phytree.core``        -- ``Tree`` / ``Node`` data model and I/O
+* ``phytree.layout``      -- topology -> display coordinates
+* ``phytree.infer``       -- distance-based inference (NJ / UPGMA), ML, parsimony
+* ``phytree.comparative`` -- ancestral state reconstruction
+* ``phytree.plot``        -- the ``TreeFigure`` builder + matplotlib/plotly backends
+"""
+from __future__ import annotations
+
+from . import core, layout, infer, comparative, plot, datasets, treeops
+from .core import Tree, Node
+from .plot import TreeFigure
+from .infer import (
+    neighbor_joining, upgma, tree_from_alignment, distance_matrix,
+    Alignment, align, read_fasta, trim, bootstrap_support, build_tree, infer_ml,
+    ml_tree, log_likelihood, model_finder, parsimony_tree, parsimony_score,
+)
+from .comparative import ace_parsimony, ace_ml, ace_continuous, stochastic_map
+from .treeops import (
+    rotate, flip, swap_children, ladderize, collapse_low_support,
+    scale_clade, cut_tree, midpoint_root, group_clade, group_otu,
+    robinson_foulds,
+)
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "core", "layout", "infer", "comparative", "plot", "datasets",
+    "Tree", "Node",
+    "TreeFigure",
+    "neighbor_joining", "upgma", "tree_from_alignment", "distance_matrix",
+    "Alignment", "align", "read_fasta", "trim", "bootstrap_support",
+    "build_tree", "infer_ml", "ml_tree", "log_likelihood", "model_finder",
+    "parsimony_tree", "parsimony_score", "robinson_foulds",
+    "ace_parsimony", "ace_ml", "ace_continuous", "stochastic_map",
+    "rotate", "flip", "swap_children", "ladderize", "collapse_low_support",
+    "scale_clade", "cut_tree", "midpoint_root", "group_clade", "group_otu",
+]
