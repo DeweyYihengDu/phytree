@@ -27,11 +27,12 @@ dependencies = [
 [project.optional-dependencies]
 interactive = ["plotly>=5.0"]
 dev = ["pytest>=7", "plotly>=5.0"]
+docs = ["mkdocs-material", "mkdocstrings[python]"]
 
 [project.urls]
 Homepage = "https://github.com/DeweyYihengDu/phytreon"
 Repository = "https://github.com/DeweyYihengDu/phytreon"
-Documentation = "https://github.com/DeweyYihengDu/phytreon#readme"
+Documentation = "https://deweyyihengdu.github.io/phytreon/"
 Issues = "https://github.com/DeweyYihengDu/phytreon/issues"
 Changelog = "https://github.com/DeweyYihengDu/phytreon/blob/main/CHANGELOG.md"
 
