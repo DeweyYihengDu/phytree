@@ -3,6 +3,12 @@
 All notable changes to phytreon are documented here. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.1] — 2026-07-01
+
+Renamed the project **phytree → phytreon**; first release published to PyPI.
+Added GitHub Actions workflows for automated PyPI publishing (trusted
+publishing / OIDC) and docs deployment to GitHub Pages.
+
 ## [0.1.0] — 2026-06-24
 
 First working version: a pure-Python phylogenetics + tree-visualisation

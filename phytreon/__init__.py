@@ -33,7 +33,7 @@ from .treeops import (
     robinson_foulds,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "core", "layout", "infer", "comparative", "plot", "datasets",
